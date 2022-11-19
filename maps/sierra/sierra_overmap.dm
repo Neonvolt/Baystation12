@@ -69,6 +69,15 @@
 	vessel_size = SHIP_SIZE_TINY
 	skill_needed = SKILL_BASIC //was trained
 
+/obj/effect/overmap/visitable/ship/landable/petrov
+	name = "Petrov"
+	shuttle = "Petrov"
+	max_speed = 1/(4 SECONDS)
+	burn_delay = 2 SECONDS
+	vessel_mass = 5600
+	fore_dir = WEST
+	vessel_size = SHIP_SIZE_SMALL
+
 /obj/machinery/computer/shuttle_control/explore/exploration_shuttle
 	name = "charon control console"
 	shuttle_tag = "Charon"
@@ -78,3 +87,8 @@
 	name = "guppy control console"
 	shuttle_tag = "Guppy"
 	req_access = list(access_guppy_helm)
+
+/obj/machinery/computer/shuttle_control/explore/petrov
+	name = "petrov control console"
+	shuttle_tag = "Petrov"
+	req_access = list(access_petrov_helm)

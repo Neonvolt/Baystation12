@@ -353,6 +353,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/quartermaster/shuttlefuel)
+"aV" = (
+/obj/effect/paint/nt_white,
+/obj/effect/paint_stripe/nt_red,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 5
+	},
+/turf/simulated/wall/r_titanium,
+/area/shuttle/petrov/cell3)
 "aW" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/thirddeck/center)
@@ -1691,14 +1702,16 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
+/obj/machinery/recharger,
+/obj/item/device/radio/off,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/cockpit)
 "dt" = (
-/obj/structure/table/reinforced,
-/obj/machinery/recharger,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
+/obj/machinery/computer/ship/engines,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/cockpit)
 "du" = (
@@ -1710,7 +1723,6 @@
 /obj/effect/floor_decal/borderfloorblack/corner2{
 	dir = 5
 	},
-/obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/device/radio/intercom{
 	dir = 8;
 	pixel_x = 20
@@ -2136,24 +2148,22 @@
 /turf/simulated/floor/plating,
 /area/exploration_shuttle/cockpit)
 "ee" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
+	},
+/obj/machinery/atmospherics/unary/engine{
+	dir = 8
 	},
 /turf/simulated/floor/airless,
 /area/shuttle/petrov/gas)
 "ef" = (
-/obj/machinery/computer/shuttle_control{
-	dir = 4;
-	req_access = list("ACCESS_PETROV_HELM");
-	shuttle_tag = "Petrov"
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/computer/shuttle_control/explore/petrov{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/cockpit)
 "eg" = (
@@ -2941,11 +2951,12 @@
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/commissary)
 "fq" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/purple/mono,
-/obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/shuttle/engine/heater{
+	dir = 4;
+	pixel_x = 32
+	},
+/obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/gas)
 "fr" = (
@@ -3019,6 +3030,9 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/gas)
@@ -3160,10 +3174,11 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/fore)
 "fG" = (
-/obj/structure/table/reinforced,
-/obj/item/device/radio/off,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
+	},
+/obj/machinery/computer/ship/helm{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/cockpit)
@@ -3274,7 +3289,6 @@
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/cargo_l)
 "fQ" = (
-/obj/structure/table/reinforced,
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/cockpit)
@@ -3484,6 +3498,10 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/cyan,
+/obj/machinery/computer/ship/sensors{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/cockpit)
 "gf" = (
@@ -3618,9 +3636,12 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/corner/purple/mono,
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/shuttle/engine/heater{
+	dir = 4;
+	pixel_x = 32
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/gas)
 "gp" = (
@@ -3912,9 +3933,13 @@
 /area/hallway/primary/thirddeck/center)
 "gL" = (
 /obj/machinery/atmospherics/unary/heater{
-	dir = 1
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple/mono,
+/obj/structure/shuttle/engine/heater{
+	dir = 4;
+	pixel_x = 32
+	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/gas)
@@ -3949,6 +3974,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/exploration)
+"gP" = (
+/obj/effect/paint/nt_white,
+/obj/effect/paint_stripe/nt_red,
+/obj/structure/fuel_port,
+/turf/simulated/wall/titanium,
+/area/shuttle/petrov/airlock)
 "gQ" = (
 /obj/effect/wallframe_spawn/reinforced/no_grille,
 /obj/machinery/door/firedoor,
@@ -4635,6 +4666,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/gas)
 "ia" = (
@@ -4844,6 +4876,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/gas)
 "ip" = (
@@ -5151,6 +5184,9 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/gas)
 "iK" = (
@@ -5386,6 +5422,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/gas)
 "jc" = (
@@ -5696,6 +5733,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/shuttle_landmark/petrov/start,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/security)
 "jA" = (
@@ -6087,6 +6125,10 @@
 /obj/structure/cable/cyan{
 	d2 = 8;
 	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/gas)
@@ -6822,6 +6864,9 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/test_room)
 "lb" = (
@@ -6855,6 +6900,9 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/test_room)
 "ld" = (
@@ -6864,6 +6912,9 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/test_room)
@@ -7313,6 +7364,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/test_room)
 "lG" = (
@@ -8672,6 +8724,9 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 5
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/test_room)
 "nx" = (
@@ -9501,6 +9556,10 @@
 "oF" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/unary/freezer{
+	icon_state = "freezer"
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/gas)
 "oG" = (
@@ -9535,13 +9594,16 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/hangar)
 "oI" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 6
 	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/gas)
 "oJ" = (
@@ -10080,6 +10142,7 @@
 /obj/structure/table/standard,
 /obj/item/folder/nt,
 /obj/effect/floor_decal/borderfloorblack,
+/obj/effect/overmap/visitable/ship/landable/petrov,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/security)
 "pA" = (
@@ -10534,6 +10597,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/gas)
 "qk" = (
@@ -10931,6 +10995,7 @@
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/test_room)
 "qO" = (
@@ -10996,6 +11061,10 @@
 "qR" = (
 /obj/structure/bed/padded,
 /obj/item/handcuffs,
+/obj/structure/shuttle/engine/heater{
+	dir = 4;
+	pixel_x = 32
+	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/petrov/cell3)
 "qS" = (
@@ -11544,6 +11613,10 @@
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/industrial/danger,
+/obj/structure/shuttle/engine/heater{
+	dir = 4;
+	pixel_x = 32
+	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/petrov/cell3)
 "rL" = (
@@ -13485,6 +13558,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/test_room)
 "uR" = (
@@ -13843,11 +13917,11 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/hangar)
 "vq" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/machinery/atmospherics/unary/engine{
+	dir = 8
 	},
 /turf/simulated/floor/airless,
 /area/shuttle/petrov/test_room)
@@ -14374,6 +14448,14 @@
 "wh" = (
 /turf/simulated/floor/tiled,
 /area/quartermaster/exploration)
+"wi" = (
+/obj/effect/paint/nt_white,
+/obj/effect/paint_stripe/nt_red,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 6
+	},
+/turf/simulated/wall/r_titanium,
+/area/shuttle/petrov/gas)
 "wj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/southleft{
@@ -15451,6 +15533,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/gas)
 "xY" = (
@@ -19836,6 +19919,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/test_room)
 "Fq" = (
@@ -22213,6 +22299,10 @@
 "IV" = (
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/shuttle/engine/heater{
+	dir = 4;
+	pixel_x = 32
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/petrov/cell3)
@@ -28642,6 +28732,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/storage/primary)
+"TR" = (
+/obj/effect/paint/nt_white,
+/obj/effect/paint_stripe/nt_red,
+/obj/machinery/atmospherics/pipe/manifold4w/visible/fuel,
+/turf/simulated/wall/r_titanium,
+/area/shuttle/petrov/gas)
 "TS" = (
 /obj/structure/table/rack,
 /obj/item/device/scanner/mining,
@@ -29267,6 +29363,11 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/reinforced,
 /area/exploration_shuttle/airlock)
+"Vu" = (
+/obj/effect/paint_stripe/nt_red,
+/obj/machinery/shipsensors/weak,
+/turf/simulated/floor/reinforced,
+/area/shuttle/petrov/cockpit)
 "Vv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -29427,6 +29528,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
+"VN" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/petrov/gas)
 "VO" = (
 /obj/structure/sign/warning/hot_exhaust{
 	dir = 1
@@ -29821,6 +29932,14 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/exploration_shuttle/airlock)
+"Wx" = (
+/obj/effect/paint/nt_white,
+/obj/effect/paint_stripe/nt_red,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 5
+	},
+/turf/simulated/wall/r_titanium,
+/area/shuttle/petrov/gas)
 "Wy" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/storage/primary)
@@ -29868,11 +29987,11 @@
 /turf/simulated/floor/reinforced,
 /area/maintenance/thirddeck/forestarboard)
 "WE" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/machinery/atmospherics/unary/engine{
+	dir = 8
 	},
 /turf/simulated/floor/airless,
 /area/shuttle/petrov/gas)
@@ -29904,6 +30023,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/fore)
+"WJ" = (
+/obj/effect/paint/nt_white,
+/obj/effect/paint_stripe/nt_red,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/turf/simulated/wall/r_titanium,
+/area/shuttle/petrov/cell3)
 "WK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	controlled = 0;
@@ -30110,6 +30235,14 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2,
 /turf/simulated/floor/tiled/white,
 /area/exploration_shuttle/medical)
+"Xc" = (
+/obj/effect/paint/nt_white,
+/obj/effect/paint_stripe/nt_red,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
+	dir = 8
+	},
+/turf/simulated/wall/r_titanium,
+/area/shuttle/petrov/cell3)
 "Xd" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -30834,6 +30967,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/gas)
 "Yy" = (
@@ -31051,6 +31185,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
+"Zb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/petrov/gas)
 "Zc" = (
 /obj/machinery/mining/brace{
 	dir = 4
@@ -31061,11 +31201,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/quartermaster/expedition/storage)
 "Zd" = (
-/obj/machinery/atmospherics/unary/freezer{
-	icon_state = "freezer"
-	},
 /obj/effect/floor_decal/corner/purple/mono,
-/obj/effect/floor_decal/industrial/outline/blue,
+/obj/effect/floor_decal/industrial/outline/orange,
+/obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/gas)
 "Ze" = (
@@ -31197,11 +31335,11 @@
 /turf/simulated/wall/r_titanium,
 /area/guppy_hangar/start)
 "Zx" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
+	},
+/obj/machinery/atmospherics/unary/engine{
+	dir = 8
 	},
 /turf/simulated/floor/airless,
 /area/shuttle/petrov/test_room)
@@ -59012,7 +59150,7 @@ Wg
 TU
 Eq
 TU
-TU
+gP
 mo
 ny
 oT
@@ -59208,7 +59346,7 @@ du
 eq
 ge
 YB
-YB
+Vu
 Wg
 it
 KC
@@ -62033,10 +62171,10 @@ ex
 ex
 dK
 eb
-sp
+Zb
 oF
 kc
-tp
+VN
 ip
 tp
 jJ
@@ -62638,9 +62776,9 @@ Is
 aM
 fH
 fH
-fH
-fH
-fH
+wi
+TR
+Wx
 fH
 mb
 nG
@@ -62651,10 +62789,10 @@ nw
 lF
 uQ
 qN
-IC
-IC
-IC
-IC
+WJ
+Xc
+Xc
+aV
 IC
 Is
 Is

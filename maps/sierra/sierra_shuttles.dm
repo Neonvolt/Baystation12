@@ -51,7 +51,7 @@ SIERRA_ESCAPE_POD(9)
 
 //Petrov
 
-/datum/shuttle/autodock/ferry/petrov
+/*/datum/shuttle/autodock/ferry/petrov
 	name = "Petrov"
 	dock_target = "petrov_shuttle"
 	waypoint_station = "nav_petrov_start"
@@ -63,7 +63,7 @@ SIERRA_ESCAPE_POD(9)
 
 /datum/shuttle/autodock/ferry/petrov/New(_name, var/obj/effect/shuttle_landmark/initial_location)
 	shuttle_area = subtypesof(/area/shuttle/petrov)
-	..()
+	..()*/
 
 /obj/effect/shuttle_landmark/petrov/start
 	name = "First Deck"
@@ -71,8 +71,28 @@ SIERRA_ESCAPE_POD(9)
 	docking_controller = "petrov_shuttle_dock"
 
 /obj/effect/shuttle_landmark/petrov/out
-	name = "Space near the vessel"
+	name = "Space near the Sierra"
 	landmark_tag = "nav_petrov_out"
+
+/datum/shuttle/autodock/overmap/petrov
+	name = "Petrov"
+	move_time = 100
+	shuttle_area = list(/area/shuttle/petrov/airlock, /area/shuttle/petrov/ship, /area/shuttle/petrov/scan, /area/shuttle/petrov/cockpit, /area/shuttle/petrov/gas, /area/shuttle/petrov/security, /area/shuttle/petrov/test_room, /area/shuttle/petrov/cell1, /area/shuttle/petrov/cell2, /area/shuttle/petrov/cell3)
+	dock_target = "petrov_shuttle"
+	current_location = "nav_petrov_start"
+	landmark_transition = "nav_transit_petrov"
+	sound_takeoff = 'sound/effects/rocket.ogg'
+	sound_landing = 'sound/effects/rocket_backwards.ogg'
+	range = 1
+	fuel_consumption = 5
+	logging_home_tag = "nav_petrov_start"
+	logging_access = access_petrov_helm
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling/sierra
+	warmup_time = 12
+
+/obj/effect/shuttle_landmark/sierra/transit/petrov
+	name = "In transit"
+	landmark_tag = "nav_transit_petrov"
 
 //Ninja Shuttle.
 /datum/shuttle/autodock/multi/antag/ninja
